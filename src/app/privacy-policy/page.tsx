@@ -78,9 +78,6 @@ export default function PrivacyPolicyPage() {
             <li>
                 <strong>Datamuse API:</strong> When you search for rhymes, synonyms, or related words using the "Datamuse API" source, your search query is sent to `api.datamuse.com` to retrieve results.
             </li>
-            <li>
-                <strong>OpenRouter AI:</strong> For experimental AI features, your prompts are sent to the OpenRouter API to generate results.
-            </li>
         </ul>
         <p>
           These services have their own privacy policies. We do not send any personally identifiable information along with these search requests.
@@ -90,11 +87,6 @@ export default function PrivacyPolicyPage() {
         <p>
           Our Website uses Google Analytics to help us understand how visitors use the site. This service collects information such as your IP address, browser type, and pages visited. This data is used in an aggregated form to improve our website.
         </p>
-
-        <h3>In-App Purchases</h3>
-        <p>
-            Free Flow offers optional "Pro" subscriptions. All payments are processed securely by Apple through the App Store. We do not collect, receive, or store any of your payment information.
-        </p>
         
         <h3>Changes to This Privacy Policy</h3>
         <p>
@@ -103,7 +95,7 @@ export default function PrivacyPolicyPage() {
 
         <h3>Contact Us</h3>
         <p>
-          If you have any questions about this Privacy Policy, you can contact us at: [Your Contact Email Address]
+          If you have any questions about this Privacy Policy, you can contact us at: Designr.pros@gmail.com
         </p>
       </LegalContent>
     </LegalContainer>

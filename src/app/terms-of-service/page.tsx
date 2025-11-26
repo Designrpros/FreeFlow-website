@@ -86,7 +86,7 @@ export default function TermsOfServicePage() {
 
         <h3>Contact Us</h3>
         <p>
-          If you have any questions about these Terms, you can contact us at: [Your Contact Email Address]
+          If you have any questions about these Terms, you can contact us at: Designr.pros@gmail.com
         </p>
       </LegalContent>
     </LegalContainer>
