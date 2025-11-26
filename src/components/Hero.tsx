@@ -1,10 +1,10 @@
 // src/components/Hero.tsx
 'use client';
 
+import Link from 'next/link';
 import styled, { keyframes } from 'styled-components';
 import { Apple } from 'lucide-react';
 import Waveform from './Waveform';
-import Image from 'next/image';
 
 const fadeIn = keyframes`
   from { opacity: 0; transform: translateY(20px); }
@@ -102,7 +102,7 @@ const Content = styled.div`
   }
 `;
 
-const AppStoreButton = styled.a`
+const CTAButton = styled.a`
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
@@ -148,9 +148,11 @@ export default function Hero() {
         <p>
           The ultimate toolkit for rappers, poets, and songwriters to spark ideas and perfect their craft.
         </p>
-        <AppStoreButton href="https://apps.apple.com/..." target="_blank" rel="noopener noreferrer">
-          <Apple /> Download on the App Store
-        </AppStoreButton>
+        <Link href="/download" passHref>
+          <CTAButton>
+            Download for macOS
+          </CTAButton>
+        </Link>
         <Waveform />
       </Content>
     </HeroContainer>
