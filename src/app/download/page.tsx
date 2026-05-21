@@ -4,7 +4,6 @@ import styled from "styled-components";
 import React from 'react';
 import { Download, AlertTriangle, ChevronsRight } from 'lucide-react';
 
-
 const PageWrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -75,30 +74,6 @@ const DownloadButton = styled.a`
   }
 `;
 
-{/*}
-const AppStoreButton = styled(DownloadButton)`
-  background: transparent;
-  border: 2px solid #A0AEC0; // A more muted border color
-  color: #4A5568; // Muted text color
-  box-shadow: none;
-  margin-bottom: 0.75rem; // Less space below
-
-  &:hover {
-    background: #EDF2F7;
-    border-color: #718096;
-    transform: translateY(-2px);
-    box-shadow: none;
-  }
-`;
-
-const CaptionText = styled.p`
-  font-size: 0.9rem;
-  font-style: italic;
-  color: #718096;
-  margin-bottom: 2.5rem; // Creates space before the next button
-`;
-*/}
-
 const InfoBox = styled.div`
   background: #EBF8FF;
   border-left: 4px solid #4A90E2;
@@ -157,27 +132,14 @@ export default function DownloadPage() {
       <DownloadContainer>
         <Header>
           <h1>Download Free Flow</h1>
-          {/* FIX 1: You're -> You&apos;re */}
           <p>You&apos;re just a few steps away from unlocking Freestyle Sessions.</p>
         </Header>
         
         <div style={{ textAlign: 'center' }}>
-          {/* 
-          <AppStoreButton 
-            href="https://apps.apple.com/"
-            target="_blank" 
-            rel="noopener noreferrer"
-          >
-            Download from App Store
-          </AppStoreButton>
-          <CaptionText>
-            Note: This version may be discontinued. We recommend the direct download below.
-          </CaptionText>
-          */}
-
-          <DownloadButton href="/freeflow.zip" download>
+          {/* UPDATED: Path matches case-sensitive web standards cleanly */}
+          <DownloadButton href="/FreeFlow.zip" download>
             <Download size={24} />
-            Direct Download
+            Download for macOS
           </DownloadButton>
         </div>
 
@@ -185,7 +147,7 @@ export default function DownloadPage() {
           <AlertTriangle size={48} style={{ flexShrink: 0, marginTop: '5px' }}/>
           <div>
             <h4>A Quick Note on Security for Direct Downloads</h4>
-            <p>Because the recommended version is distributed directly by us, macOS will show a standard security warning. This is expected. <strong>We guarantee the app is safe.</strong> Follow the steps below to approve it.</p>
+            <p>Because the recommended version is distributed directly by us, macOS will show a standard Gatekeeper warning. This is expected. <strong>We guarantee the app is safe.</strong> Follow the steps below to approve it.</p>
           </div>
         </InfoBox>
 
@@ -193,33 +155,32 @@ export default function DownloadPage() {
 
         <InstructionStep>
           <h3>Step 1: Unzip and Install</h3>
-          <p>After downloading, double-click the <code>peak-browser.zip</code> file to unzip it. Then, drag the new <strong>Peak Browser</strong> icon into your <strong>Applications</strong> folder.</p>
+          {/* FIXED: Name matching corrected to app parameters */}
+          <p>After downloading, double-click the <code>FreeFlow-macOS.zip</code> file to unzip it. Then, drag the new <strong>FreeFlow</strong> icon into your <strong>Applications</strong> folder.</p>
         </InstructionStep>
 
         <InstructionStep>
           <h3>Step 2: Try to Open the App</h3>
-          {/* FIX 2: you'll -> you&apos;ll */}
-          <p>When you first double-click the app from your Applications folder, you&apos;ll see a security warning. Click <strong>OK</strong>.</p>
+          <p>When you first double-click the app from your Applications folder, you&apos;ll see a security warning. Click <strong>OK</strong> or close the dialog.</p>
         </InstructionStep>
 
         <InstructionStep>
           <h3>Step 3: Approve in System Settings</h3>
-          {/* FIX 3 & 4: "Peak Browser" -> &quot;Peak Browser&quot; */}
-          <p>Go to <strong>Apple menu () &gt; System Settings &gt; Privacy & Security</strong>. Scroll down and you will see a message about &quot;Peak Browser&quot;. Click the <strong>Open Anyway</strong> button.</p>
+          {/* FIXED: References targeted to FreeFlow brand specs */}
+          <p>Go to <strong>Apple menu () &gt; System Settings &gt; Privacy & Security</strong>. Scroll down and you will see a message about &quot;FreeFlow&quot;. Click the <strong>Open Anyway</strong> button.</p>
         </InstructionStep>
 
         <InstructionStep>
           <h3>Step 4: Final Confirmation</h3>
           <p>A final prompt will appear. This time, it will have an <strong>Open</strong> button. Click it.</p>
-          {/* FIX 5 & 6: That's -> That&apos;s and won't -> won&apos;t */}
-          <p>That&apos;s it! Peak Browser will now launch, and you won&apos;t need to do this again.</p>
+          <p>That&apos;s it! FreeFlow will now launch, and you won&apos;t need to do this again.</p>
         </InstructionStep>
         
         <InfoBox>
           <ChevronsRight size={48} style={{ flexShrink: 0, marginTop: '5px' }}/>
           <div>
             <h4>Pro Tip: The Right-Click Method</h4>
-            <p>Alternatively, you can simply <strong>right-click</strong> the app icon, select <strong>Open</strong> from the menu, and then click <strong>Open</strong> on the dialog that appears. This is a faster way to complete Step 2 & 4!</p>
+            <p>Alternatively, you can simply <strong>right-click</strong> the app icon, select <strong>Open</strong> from the menu, and then click <strong>Open</strong> on the dialog that appears. This bypasses needing to visit System Settings entirely!</p>
           </div>
         </InfoBox>
       </DownloadContainer>
