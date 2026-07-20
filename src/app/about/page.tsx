@@ -1,7 +1,6 @@
 // src/app/about/page.tsx
 'use client';
 
-import Link from 'next/link';
 import styled from 'styled-components';
 
 const AboutContainer = styled.main`
@@ -58,23 +57,6 @@ const TextContent = styled.section`
     left: 0;
     color: ${({ theme }) => theme.colors.accent};
     font-weight: bold;
-  }
-`;
-
-const CTAButton = styled.a`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: #000;
-  color: #fff;
-  padding: 1rem 2rem;
-  border-radius: 12px;
-  font-weight: bold;
-  margin-top: 2.5rem;
-  transition: transform 0.2s ease;
-
-  &:hover {
-    transform: scale(1.05);
   }
 `;
 
@@ -147,10 +129,6 @@ export default function AboutPage() {
           private iCloud container. No user accounts, no analytics inside the
           app, and no third-party servers touching your creative work.
         </p>
-
-        <Link href="/download" passHref legacyBehavior>
-          <CTAButton>Download Free Flow</CTAButton>
-        </Link>
       </TextContent>
     </AboutContainer>
   );

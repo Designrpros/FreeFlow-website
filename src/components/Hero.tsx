@@ -1,9 +1,7 @@
 // src/components/Hero.tsx
 'use client';
 
-import Link from 'next/link';
 import styled, { keyframes } from 'styled-components';
-import { Apple } from 'lucide-react';
 import Waveform from './Waveform';
 
 const fadeIn = keyframes`
@@ -11,7 +9,6 @@ const fadeIn = keyframes`
   to { opacity: 1; transform: translateY(0); }
 `;
 
-// NEW: Multiple keyframe animations for varied movement
 const float1 = keyframes`
   0% { transform: translate(0,  0px); }
   50% { transform: translate(-10px, -15px); }
@@ -61,7 +58,6 @@ const WordsBackground = styled.div`
   overflow: hidden;
 `;
 
-// UPDATED: The Word component now accepts an animation property
 const Word = styled.span<{ $x: number, $y: number, $size: number, $opacity: number, $duration: number, $delay: number, $animation: any }>`
   position: absolute;
   left: ${({ $x }) => $x}%;
@@ -102,25 +98,6 @@ const Content = styled.div`
   }
 `;
 
-const CTAButton = styled.a`
-  display: inline-flex;
-  align-items: center;
-  gap: 0.75rem;
-  background: #000;
-  color: #fff;
-  padding: 1rem 2rem;
-  border-radius: 12px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  font-weight: bold;
-  animation: ${fadeIn} 0.8s 0.4s ease-out forwards;
-  opacity: 0;
-  transition: transform 0.2s ease;
-  
-  &:hover {
-    transform: scale(1.05);
-  }
-`;
-
 const words = ["River", "Mountain", "Whisper", "Flow", "Rise", "Conquer", "Dream", "Cityscape", "Rhythm", "Silence", "Legacy", "Climb", "Shatter", "Ignite", "Throne", "Abyss", "Genesis", "Vortex", "Glory", "Grit", "Time"];
 
 export default function Hero() {
@@ -134,9 +111,8 @@ export default function Hero() {
             $y={Math.random() * 100}
             $size={12 + Math.random() * 48}
             $opacity={0.1 + Math.random() * 0.2}
-            $duration={8 + Math.random() * 8} // Slower, more ambient movement (8-16s)
-            $delay={Math.random() * 10}      // Staggered start times
-            // UPDATED: Randomly assign one of the float animations
+            $duration={8 + Math.random() * 8}
+            $delay={Math.random() * 10}
             $animation={animations[i % animations.length]}
           >
             {words[i % words.length]}
@@ -148,11 +124,6 @@ export default function Hero() {
         <p>
           The ultimate toolkit for rappers, poets, and songwriters to spark ideas and perfect their craft.
         </p>
-        <Link href="/download" passHref>
-          <CTAButton>
-            Download for macOS
-          </CTAButton>
-        </Link>
         <Waveform />
       </Content>
     </HeroContainer>
