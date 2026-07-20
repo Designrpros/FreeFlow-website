@@ -2,7 +2,7 @@ import ThemeRegistry from './ThemeRegistry';
 import Navbar from '../components/Navbar';
 import GoogleAnalytics from '../components/GoogleAnalytics';
 
-const GA_MEASUREMENT_ID = "G-XXXXXXXXXX"; 
+const GA_MEASUREMENT_ID = "G-Y7XE6ZF59D"; 
 
 export const metadata = {
   title: 'Free Flow | Your Digital Freestyle & Lyricism Partner',
