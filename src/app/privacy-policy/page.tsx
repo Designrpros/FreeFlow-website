@@ -46,7 +46,7 @@ export default function PrivacyPolicyPage() {
     <LegalContainer>
       <Title>Privacy Policy</Title>
       <LegalContent>
-        <p><em>Last Updated: October 22, 2025</em></p>
+        <p><em>Last Updated: July 20, 2026</em></p>
 
         <p>
           Your privacy is important to us. This Privacy Policy explains how we handle your information when you use the Free Flow application ("App") and its related website ("Website").
@@ -59,11 +59,14 @@ export default function PrivacyPolicyPage() {
 
         <h3>Data Stored on Your Device and in Your iCloud</h3>
         <p>
-          The text notes and audio recordings you create in the Notepad are stored locally on your device. If you have iCloud enabled, this data is automatically and privately synced across your devices using Apple’s CloudKit service. 
+          Content you create in the App is stored locally on your device. If you have iCloud enabled, it is synced privately across your devices using Apple’s iCloud services.
         </p>
         <ul>
             <li>
-                Your Notepad content (text and recordings) is stored in your private iCloud container (`iCloud.freeflow`).
+                <strong>Notepad content:</strong> Text notes are stored in Core Data and synced via your private CloudKit container (`iCloud.freeflow`).
+            </li>
+            <li>
+                <strong>Audio recordings and imported instrumentals:</strong> These are stored as files in the App’s documents folder and synced through your private iCloud Documents container.
             </li>
             <li>
                 We, the developers of Free Flow, do not have access to any of the content you create and store in the App. It is under your control and protected by your Apple ID's security.
@@ -72,11 +75,11 @@ export default function PrivacyPolicyPage() {
 
         <h3>Information Sent to Third-Party Services</h3>
         <p>
-          To provide its powerful word-finding features, the App sends the words you type to third-party services. This is only done when you actively perform a search in the "Rhymes" or "Explore" tabs.
+          To provide word-finding features, the App sends the words you type or select to third-party services. This only happens when the "Datamuse API" word source is active.
         </p>
         <ul>
             <li>
-                <strong>Datamuse API:</strong> When you search for rhymes, synonyms, or related words using the "Datamuse API" source, your search query is sent to `api.datamuse.com` to retrieve results.
+                <strong>Datamuse API:</strong> When you search in the "Rhymes" or "Explore" tabs, or when you use "Word Flow + Rhymes" mode in the "Flow" tab, your query word is sent to `api.datamuse.com` to retrieve rhyme, synonym, or related-word results.
             </li>
         </ul>
         <p>
