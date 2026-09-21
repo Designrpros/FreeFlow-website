@@ -137,6 +137,7 @@ const Navbar: React.FC = () => {
   
   const navItems = [
     { href: "/about", label: "About" },
+    { href: "/privacy-policy", label: "Privacy" },
     { href: "/terms-of-service", label: "Terms" },
   ];
 
